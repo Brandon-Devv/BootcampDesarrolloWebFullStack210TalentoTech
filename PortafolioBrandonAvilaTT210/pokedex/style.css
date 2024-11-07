@@ -1,0 +1,191 @@
+* {
+    font-family: 'Krub', sans-serif;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+}
+
+body {
+    background-image: url("img/paisaje.avif");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usar el alto completo de la ventana */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evitar scroll en el body */
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Permite el scroll vertical si el contenido es largo */
+    height: calc(100vh - 40px); /* Ajusta para el padding */
+}
+
+.pokedex-container {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+    border: 4px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite scroll interno si el contenido es largo */
+    max-height: 80vh; /* Limita la altura máxima para mantener visibilidad */
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px; /* Espacio en la parte inferior para los botones */
+}
+
+.pokemon-card {
+    background: linear-gradient(180deg, #efd5ff 0%, #515ada 100%);
+    padding: 10px;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.pokemon-card img {
+    width: auto;
+    height: auto;
+    border: 4px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.pokemon-card img:hover {
+    cursor: pointer;
+    background-color: #a154ff;
+}
+
+.pokemon-detail {
+    background: linear-gradient(180deg, #efd5ff 0%, #515ada 100%);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 10px;
+    text-align: center;
+    border: solid black;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.pokemon-info {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.pokemon-info img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+#back-button {
+    background-color: white;
+    color: #000000;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    display: block;
+}
+
+#back-button:hover {
+    cursor: pointer;
+    background-color: #a154ff;
+    color: #fff;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones de paginación */
+    margin-top: 20px; /* Margen superior para separación */
+}
+
+.pagination-buttons .prev-button,
+.pagination-buttons .next-button {
+    background-color: white;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px;
+    margin: 0 10px; /* Espacio entre los botones */
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.pagination-buttons .prev-button:hover,
+.pagination-buttons .next-button:hover {
+    background-color: #a154ff;
+    cursor: pointer;
+}
+
+.search-input {
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    width: calc(100% - 20px); /* Espaciado en móviles */
+}
+
+#search-button {
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    background-color: white;
+    font-weight: bold;
+}
+
+#search-button:hover {
+    cursor: pointer;
+    background-color: #a154ff;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .pokedex-container {
+        padding: 10px;
+        width: 95%; /* Aumentar el ancho en pantallas pequeñas */
+    }
+
+    .pokemon-card {
+        font-size: 13px; /* Ajustar el tamaño de la fuente en móviles */
+    }
+
+    .pagination-buttons .prev-button,
+    .pagination-buttons .next-button {
+        font-size: 23px; /* Reducir el tamaño de la fuente de los botones en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    #search-button, 
+    #back-button {
+        width: 100%; /* Botones ocupan el ancho completo en móviles */
+        font-size: 18px; /* Reducir tamaño de fuente */
+    }
+
+    .search-input {
+        width: calc(100% - 20px); /* Asegurar que el input sea responsivo */
+    }
+}

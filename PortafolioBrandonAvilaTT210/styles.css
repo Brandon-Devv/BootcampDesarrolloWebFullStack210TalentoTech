@@ -1,0 +1,600 @@
+/* Paleta de colores */
+:root {
+    --bg-color: #121212;
+    --primary-color: #1a1a1a;
+    --accent-color-blue: aqua;
+    --accent-color-purple: #6a0dad;
+    --text-color: #ffffff;
+    --text-muted: #b0b0b0;
+}
+html {
+    scroll-padding-top: 110px; /* Esto ajusta el desplazamiento de las anclas */
+    font-family: 'Krub', sans-serif;
+    text-decoration: none;
+}
+body {
+    font-family: 'Krub', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Estilos generales para el header */
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 98%;
+    height: auto;
+    z-index: 1000; /* Coloca el encabezado encima del contenido */
+    padding: 10px 20px; /* Espaciado del contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para distinguir el menú */
+    text-decoration: none;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 0;
+    text-decoration: none;
+}
+.nombrepag{
+    text-decoration: none;
+}
+.menu{
+    margin-right: 5%;
+}
+.separador-blanco {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+
+/* Estilos para el menú */
+.menu {
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para redes sociales a la derecha */
+.redes-sociales {
+    display: flex;
+    justify-content: end;
+}
+
+.icon-redes svg:hover {
+    stroke: var(--accent-color-blue);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cambia la estructura del grid para pantallas pequeñas */
+    .header {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+        position: relative; /* Cambia a relative en lugar de fixed */
+        padding: 15px; /* Añadir algo de padding */
+        margin-bottom: 0; /* Evita que se agregue espacio al final del header */
+    }
+
+    /* El menú se vuelve vertical */
+    .menu ul {
+        display: block; /* Cambiar de fila a columna */
+        padding: 10px 0; /* Añadir un poco de espaciado */
+    }
+
+    .menu ul li {
+        display: block; /* Cambiar de inline a block para apilar los elementos */
+        margin: 10px 0; /* Espaciado entre los elementos */
+    }
+
+    /* Alineación de las redes sociales */
+    .redes-sociales {
+        justify-content: center; /* Centrar las redes sociales en pantallas pequeñas */
+        margin-top: 20px; /* Añadir un espacio superior para separarlas del menú */
+    }
+
+    /* Permitir desplazamiento en dispositivos pequeños */
+    body {
+        padding-top: 100px; /* Agregar espacio superior para que el contenido no quede tapado */
+    }
+}
+
+main{
+    padding: 1%;
+    padding-top: 110px;
+}
+
+.dev{
+    color: var(--accent-color-purple);
+}
+/* Estilos para la sección Acerca de Mí */
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,13,173,1) 100%);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 400px;
+}
+
+.about-image {
+    position: relative;
+    display: inline-block;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    mask-image: linear-gradient(
+        black 80%,
+        transparent
+    );
+}
+
+.about-image img::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top, #1c1c1c 100%, transparent 40%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Agrega transición suave */
+}
+
+.about-text:hover {
+    transform: scale(1.2); /* Agranda el contenedor al pasar el mouse */
+}
+
+.about-text h2 {
+    transition: transform 0.3s ease; /* Agrega transición suave a los textos */
+}
+
+.about-text h2:hover {
+    transform: scale(1.1); /* Agranda cada texto ligeramente al pasar el mouse */
+}
+
+.about1 {
+    color: white;
+    font-weight: 700;
+}
+
+.servicios-titulo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+/*Perfil Profesional*/
+#perfil {
+    padding: 50px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(106, 13, 173, 0.9));
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#perfil h2 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#perfil p {
+    color: var(white);
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* Experiencia*/
+#experiencia {
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#experiencia h2 {
+    color: var(--accent-color-purple);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#experiencia p, strong {
+    color: var(--accent-color-purple);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#experiencia ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+#experiencia ul li {
+    color: black;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+#experiencia strong {
+    color: var(--accent-color-blue);
+    font-size: 18px;
+}
+/*Formacion academica*/
+#educacion {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(106, 13, 173, 0.9));
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#educacion h2 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#educacion ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+#educacion ul li {
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+#educacion ul li strong{
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+#educacion strong {
+    color: var(--accent-color-blue);
+    font-size: 18px;
+}
+/* Contenedor principal para organizar tarjetas en fila */
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas si no caben */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: space-between; /* Distribuye las tarjetas para ocupar el espacio horizontal */
+    padding: 20px;
+}
+/* Colores y estilos de los títulos */
+.servicio h3 {
+    color: #3b3f5c; /* Título de cada tarjeta */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+/* Estilos para el icono */
+.servicio .iconos svg {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 10px;
+    stroke: #3b3f5c;
+}
+
+/* Color de texto */
+.servicio p {
+    color: #4a4a4a;
+    font-size: 1em;
+    line-height: 1.5;
+}
+/* Estilos de cada tarjeta */
+.card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+    text-align: center;
+    transition: transform 0.3s ease; /* Efecto de escala al pasar el cursor */
+    background-image: linear-gradient(163deg, #5e3c81 20%, aqua 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    height: auto;
+    min-height: 350px;
+}
+
+.card2 {
+    padding: 5px;
+    max-width: 455px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius:20px;
+    transition: all .2s;
+    height: auto;
+    min-height: 345px;
+}
+
+.card2:hover {
+ transform: scale(0.98);
+ border-radius: 20px;
+}
+
+.card:hover {
+ box-shadow: 0px 0px 30px 3px rgba(204, 0, 255, 0.3);
+}
+/* Ajuste para dispositivos móviles */
+@media (max-width: 600px) {
+    .servicios {
+        padding: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .servicio {
+        padding: 15px;
+    }
+}
+@media (max-width: 980px) {
+    .servicios {
+        padding: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+    }
+    .card.card2 {
+        padding: 10px;
+        height: 300px;
+    }
+    .card.card2 {
+        padding: 10px;
+        height: 298px;
+    }
+    .servicio {
+        padding: 15px;
+    }
+}
+.card-container {
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 97%; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.card-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1px;
+}
+
+.tab-button {
+    background-color: rgb(197, 197, 197);
+    color: #01013e;
+    border: none;
+    padding: 1%;
+    cursor: pointer;
+    flex: 1;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.tab-button.active {
+    background-color: white;
+    color: var(--accent-color-purple);
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.tab-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 10px; /* Ajusta el espacio entre las tarjetas */
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.linkProyect{
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    color: white;
+    width: 97%; /* Asegura que se ajuste bien en dispositivos móviles */
+    max-width: 97%; /* Controla el tamaño máximo de cada tarjeta */
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 1px;
+    text-decoration: none;
+    font-size: 22px;
+}
+.linkProyect:hover {
+    color: var(--accent-color-purple); /* Cambia el color cuando se pasa el cursor */
+    background-color: white;
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño de la fuente */
+    box-shadow: 0 10px 60px var(--accent-color-purple); /* Sombra de fondo */
+}
+  
+.project-card img {
+    width: 80%;
+    height: 79%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.social-icons a {
+    color: #a0a0ff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+/* Estilos para el formulario de contacto */
+.formulario {
+    background-color: var(--accent-color-purple);
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px white;
+    max-width: 800px;
+    margin: auto;
+    color: var(--text-color);
+}
+
+.formulario legend {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedor-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+}
+
+.campo input,
+.campo textarea {
+    background-color: #ffffff;
+    color: var(--text-color);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--accent-color-purple);
+    outline: none;
+    color: #121212;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton {
+    background-color: white;
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.boton:hover {
+    background-color: var(--accent-color-purple);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--accent-color-blue);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

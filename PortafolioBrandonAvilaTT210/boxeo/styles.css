@@ -1,0 +1,398 @@
+:root {
+    --titulos: #dbff00;
+}
+
+
+*{
+    font-family: "Oswald", sans-serif;
+}
+
+body{
+    background-color: gray;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+}
+
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo img {
+    height: 80px;
+    margin: 20px;
+}
+
+.nav {
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav a:hover {
+    color: var(--titulos);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+}
+
+.hero{
+    background-color: black;
+    color: #fff;
+    background-image: url(/PortafolioBrandonAvilaTT210/boxeo/img/slide_01.jpg);
+    background-size: cover;
+    background-position: top right;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.herocontent {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin:  200px auto;
+}
+
+.herotitle {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 60%;
+    line-height: 1.1em;
+}
+
+.herotitle span, .box span {
+    color: var(--titulos); 
+}
+
+
+.herotext {
+    text-align: justify;
+    width: 60%;
+    font-family: "Poppins", sans-serif;
+    font-stretch: condensed;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.cta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+    gap: 20px;
+}
+
+.cta a{
+    
+    color: #fff;
+    box-sizing: content-box;
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+#boton1 {
+    background-color: var(--titulos);
+    color: black;
+}
+
+#boton1:hover {
+    background-color: #fff;
+    color: black;
+}
+
+#boton2 {
+    border: solid white 2px;
+    color: #fff;
+}
+
+#boton2:hover {
+    border: solid white 2px;
+    background-color: #fff;
+    color: #000000;
+}
+/* ------------- MAIN ----------------------- */ 
+
+.cajas{
+    display: flex;
+    background-color: #fff;
+    padding: 5px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box{
+    background-color: #fff;
+    color: #fff;
+    height: 370px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 20px 10px;
+}
+
+.box h3 {
+    padding: 20px 0px 0px 20px;
+    margin-left: 20px;
+}
+
+.box p{
+    margin-left: 20px;
+    padding: 0px 0px 20px 20px;
+    font-family: "Poppins", sans-serif;
+    font-stretch: condensed;
+    line-height: 1.8em;
+    font-size: 0.8em;
+}
+
+.box1{
+    background-image: url(/PortafolioBrandonAvilaTT210/boxeo/img/slide_02.jpg);
+    background-size: cover;
+}
+
+.box2{
+    background-image: url(/PortafolioBrandonAvilaTT210/boxeo/img/slide_03.jpg);
+    background-size: cover;
+}
+
+.box3{
+    background-image: url(/PortafolioBrandonAvilaTT210/boxeo/img/slide_04.jpg);
+    background-size: cover;
+}
+
+
+/*-------------- ABOUT --------------------*/
+
+.about{
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+
+.foto {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.foto img{
+    width: 90%;
+}
+
+.about-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 50px;
+}
+
+.about-title{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.about-title::before {
+    content: '"';
+    color: var(--titulos);
+    font-size: 3em;
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    z-index: -1;
+}
+
+.tag-line{
+    font-family: "Poppins", sans-serif;
+    font-stretch: condensed;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.about p{
+    font-family: "Poppins", sans-serif;
+    font-stretch: condensed;
+    line-height: 2em;
+    font-size: 1em;
+    width: 80%;
+}
+
+.signature{
+    display: flex;
+}
+
+.signature h5{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px;
+    line-height: 2em;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.s1{
+    width: 50%;
+}
+
+.s1 p{
+    font-family: "Poppins", sans-serif;
+    font-stretch: condensed;
+    line-height: 1.5em;
+    font-size: 1em;
+    margin: 0;
+}
+
+.marco{
+    text-transform: uppercase;
+    font-size: 130px;
+    position: absolute;
+    top: -15%;
+    
+    opacity: .2;
+    text-align: center;
+}
+/* Media Queries */
+@media (max-width: 1024px) {
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .herocontent {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .herotitle {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .herotext, .cta {
+        width: 100%;
+    }
+
+    .cajas {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .foto, .about-content {
+        width: 100%;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .herocontent {
+        margin: 50px auto;
+    }
+
+    .herotitle {
+        font-size: 1.5em;
+    }
+
+    .cta a {
+        height: 40px;
+        width: 120px;
+        font-size: 0.8em;
+    }
+
+    .cajas {
+        padding: 10px;
+    }
+
+    .box {
+        height: auto;
+    }
+
+    .about-title {
+        font-size: 1.8em;
+    }
+}

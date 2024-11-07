@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Fibonacci</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h2>Serie de Fibonacci hasta N</h2>
+            <input type="number" id="fiboLimite" placeholder="Ingrese un número">
+            <button id="btnFiboLimite">Mostrar serie</button>
+            <div id="resultadoFiboLimite" class="resultado"></div>
+        </div>
+        <div class="tarjeta">
+            <h2>Serie de Fibonacci con inicio personalizado</h2>
+            <input type="number" id="numElementos" placeholder="Cantidad de elementos">
+            <input type="number" id="inicio1" placeholder="Primer número">
+            <input type="number" id="inicio2" placeholder="Segundo número">
+            <button id="btnFiboPersonalizado">Calcular</button>
+            <div id="resultadoFiboPersonalizado" class="resultado"></div>
+        </div>
+        <div class="tarjeta">
+            <h2>Fibonacci hasta N elementos</h2>
+            <input type="number" id="fiboElementos" placeholder="Número de elementos">
+            <button id="btnFiboElementos">Generar serie</button>
+            <div id="resultadoFiboElementos" class="resultado"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <main>
+        <div class="pokedex-container">
+            <h1>POKEDEX</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Buscar pokemon por ID o Nombre">
+                <button id="search-button">Buscar</button>
+            </div>
+            <div class="pokemon-list" id="pokemon-list"></div>
+        </div>
+
+        <div class="pokemon-detail" id="pokemon-detail" style="display: none;">
+            <div class="pokemon-info"></div>
+            <button id="back-button">Regresa a la pokedex</button>
+        </div>
+
+        <div class="pagination-buttons">
+            <button class="prev-button" id="prev-button" alt="Anterior"> < </button>
+            <button class="next-button" id="next-button" alt="Siguiente"> > </button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

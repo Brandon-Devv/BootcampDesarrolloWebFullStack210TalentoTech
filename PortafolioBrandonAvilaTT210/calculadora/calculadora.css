@@ -1,0 +1,117 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2f; /* Azul oscuro de fondo */
+}
+
+.calculadora {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 400px;
+    height: 500px;
+    background-color: #2d2d3a; /* Morado oscuro de fondo para la calculadora */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Pantalla de la calculadora */
+.pantalla {
+    background-color: #3c3c56; /* Morado más claro para la pantalla */
+    color: #e0e6ed; /* Texto de pantalla en gris claro */
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid #565676;
+}
+
+/* Botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Botones de número */
+.numero {
+    background-color: #444466; /* Azul oscuro */
+    color: #e0e6ed;
+}
+
+.numero:hover {
+    background-color: #56567a; /* Azul más claro al hacer hover */
+}
+
+/* Botones de operador */
+.operador {
+    background-color: #7d5ba6; /* Morado medio */
+    color: #ffffff;
+}
+
+.operador:hover {
+    background-color: #936ac4; /* Morado más claro al hacer hover */
+}
+
+/* Botón de AC */
+#btn-ac {
+    background-color: #e74c3c; /* Rojo para borrar todo */
+    color: #ffffff;
+}
+
+#btn-ac:hover {
+    background-color: #ff665a; /* Rojo más claro al hacer hover */
+}
+
+/* Botón de DEL */
+#btn-del {
+    background-color: #ff9f1c; /* Naranja */
+    color: #ffffff;
+}
+
+#btn-del:hover {
+    background-color: #ffb347; /* Naranja más claro al hacer hover */
+}
+
+/* Botón de Igual */
+#btn-igual {
+    background-color: #368bfd; /* Azul brillante */
+    color: #ffffff;
+    grid-column: span 2;
+}
+
+#btn-igual:hover {
+    background-color: #5a9cfc; /* Azul claro al hacer hover */
+}
+
+/* Botón de Porcentaje */
+#btn-porcentaje {
+    background-color: #6a4c93; /* Morado oscuro */
+    color: #ffffff;
+}
+
+#btn-porcentaje:hover {
+    background-color: #8e66b8; /* Morado claro al hacer hover */
+}

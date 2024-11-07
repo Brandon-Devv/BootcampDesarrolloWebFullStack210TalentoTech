@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <main class="calculadora" role="application" aria-label="Calculadora">
+        <div class="pantalla" id="pantalla" role="status" aria-live="polite">0</div>
+        <div class="botones">
+            <!-- Botones de control -->
+            <button class="btn" id="btn-ac" aria-label="Limpiar">AC</button>
+            <button class="btn" id="btn-del" aria-label="Borrar">DEL</button>
+            <button class="btn operador" id="btn-division">/</button>
+            <button class="btn" id="btn-porcentaje">%</button>
+
+            <!-- Botones numéricos y de operaciones -->
+            <button class="btn numero">7</button>
+            <button class="btn numero">8</button>
+            <button class="btn numero">9</button>
+            <button class="btn operador">×</button>
+
+            <button class="btn numero">4</button>
+            <button class="btn numero">5</button>
+            <button class="btn numero">6</button>
+            <button class="btn operador">-</button>
+
+            <button class="btn numero">1</button>
+            <button class="btn numero">2</button>
+            <button class="btn numero">3</button>
+            <button class="btn operador">+</button>
+
+            <button class="btn numero">.</button>
+            <button class="btn numero">0</button>
+            <button class="btn" id="btn-igual">=</button>
+        </div>
+    </main>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
